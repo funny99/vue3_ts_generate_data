@@ -1,18 +1,26 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <h1>项目列表</h1>
+    <el-table :data="data.list" border style="width: 100%">
+      <el-table-column prop="projectName" label="项目名称">
+      </el-table-column>
+      <el-table-column label="操作">
+        <el-button type="text" size="small" @click="$router.push('/edit')">编辑</el-button>
+      </el-table-column>
+    </el-table>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import { defineComponent, reactive } from "vue";
+import dataSource1 from "@/data/dataSource1";
 
 export default defineComponent({
-  name: "Home",
-  components: {
-    HelloWorld,
+  setup() {
+    const data = reactive({list: [dataSource1]});
+    return {
+      data
+    };
   },
 });
 </script>
