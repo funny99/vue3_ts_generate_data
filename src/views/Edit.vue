@@ -36,22 +36,7 @@
 import { defineComponent, reactive, computed } from "vue";
 import dataSource1 from "@/data/dataSource1";
 import EditItem from '../components/EditItem.vue';
-
-interface IData {
-    project: {[propKey: string]: any};
-    projectValue: {[propKey: string]: any};
-}
-
-interface Ifield {
-  name: string;
-  label: string;
-  type: string;
-  childFields?: Ifield[];
-}
-
-interface IObj {
-  [propKey: string]: any;
-}
+import { IData, Ifield, IObj } from './Edit.d';
 
 export default defineComponent({
   components: {

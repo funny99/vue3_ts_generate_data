@@ -25,12 +25,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, PropType } from "vue";
+import { Ifield, IObj } from '../views/Edit.d';
 
 export default defineComponent({
   props: {
-    item: Object,
-    projectValue: Object,
+    item: Object as PropType<Ifield>,
+    projectValue: Object as PropType<IObj>,
   },
   setup(props) {
     console.log(props);
