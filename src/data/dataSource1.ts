@@ -21,6 +21,33 @@ export default {
             name: 'bgImg',
             label: '背景图',
             type: 'text',
+        },
+        {
+            name: 'grids',
+            label: '宫格',
+            type: 'array',
+            childFields: [
+                {
+                    name: 'name',
+                    label: '名称',
+                    type: 'text',
+                },
+                {
+                    name: 'iconImgUrl',
+                    label: 'icon',
+                    type: 'text',
+                },
+                {
+                    name: 'type',
+                    label: '类型',
+                    type: 'text',
+                },
+                {
+                    name: 'prizeImgUrl',
+                    label: '奖品图',
+                    type: 'text',
+                },
+            ],
         }
     ],
 
